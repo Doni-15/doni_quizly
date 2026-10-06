@@ -243,7 +243,7 @@ Proyek dikerjakan bertahap dengan satu commit untuk tiap fitur yang selesai. Riw
 ## Progres Pengerjaan
 
 - [x] Tahap 1: Inisialisasi proyek dan konfigurasi dependencies dan aset
-- [ ] Tahap 2: Struktur folder, tema, dan font kustom
+- [x] Tahap 2: Struktur folder, tema, dan font kustom
 - [ ] Tahap 3: Model dan data pertanyaan lokal
 - [ ] Tahap 4: Navigasi dengan `go_router`
 - [ ] Tahap 5: Halaman Home dan reusable widget
