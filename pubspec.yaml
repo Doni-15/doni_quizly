@@ -1,0 +1,67 @@
+name: quizly
+description: "Quizly adalah aplikasi kuis pilihan ganda bertema kriptografi berbasis Flutter. Pengguna memasukkan nama, menjawab serangkaian pertanyaan, lalu melihat skor akhir atas namanya beserta ulasan jawaban."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  provider: ^6.1.5+1
+  go_router: ^18.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+  flutter_native_splash: ^2.4.8
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/app_logo.png
+    - assets/images/icon_app.png
+    - assets/images/splash_logo.png
+    - assets/images/piala.png
+
+  fonts:
+    - family: PlusJakartaSans
+      fonts:
+        - asset: assets/fonts/PlusJakartaSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/PlusJakartaSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/PlusJakartaSans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/PlusJakartaSans-ExtraBold.ttf
+          weight: 800
+
+flutter_native_splash:
+  # Pengaturan untuk Light Mode
+  color: "#F4F8FC" 
+  image: "assets/images/splash_logo.png"
+  
+  # Pengaturan untuk Dark Mode
+  color_dark: "#0B1120"
+  image_dark: "assets/images/splash_logo.png"
+
+  # Konfigurasi khusus Android 12+
+  android_12:
+    image: "assets/images/splash_logo.png"
+    image_dark: "assets/images/splash_logo.png"
+    color: "#F4F8FC"
+    color_dark: "#0B1120"
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/icon_app.png"
+  adaptive_icon_background: "#F4F8FC"
+  adaptive_icon_foreground: "assets/images/icon_app.png"
