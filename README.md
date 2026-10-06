@@ -63,19 +63,19 @@ Kuis terdiri dari 10 pertanyaan seputar dasar-dasar kriptografi, seperti cipher 
 | No | Kriteria wajib | Implementasi | Selesai |
 | :-: | :--- | :--- | :-: |
 | 1 | `StatelessWidget` dan `StatefulWidget` | `StatefulWidget` dipakai pada form input nama untuk mengelola `TextEditingController`, `StatelessWidget` untuk komponen UI statis seperti tombol dan kartu. | [ ] |
-| 2 | Minimal 2 halaman dan navigasi | 4 halaman (Home, Quiz, Result, Review) dengan `go_router` | [ ] |
+| 2 | Minimal 2 halaman dan navigasi | 4 halaman (Home, Quiz, Result, Review) dengan `go_router` | [x] |
 | 3 | Reusable widget di file terpisah | `lib/widgets/` | [ ] |
-| 4 | Aset gambar atau ikon | `assets/images/` | [ ] |
-| 5 | Font kustom | Plus Jakarta Sans, diatur terpusat lewat `ThemeData`. | [ ] |
-| 6 | Ukuran UI dinamis | `QuizResponsive.appBuilder` dan `MediaQuery.sizeOf(context)` untuk menghitung padding dan skala teks (`TextScaler`). | [ ] |
+| 4 | Aset gambar atau ikon | `assets/images/` | [x] |
+| 5 | Font kustom | Plus Jakarta Sans, diatur terpusat lewat `ThemeData`. | [x] |
+| 6 | Ukuran UI dinamis | `QuizResponsive.appBuilder` dan `MediaQuery.sizeOf(context)` untuk menghitung padding dan skala teks (`TextScaler`). | [x] |
 | 7 | State management (progres aman saat rotasi dan pindah halaman) | `provider` (`ChangeNotifier`) | [ ] |
-| 8 | Tanpa database | Data lokal di `lib/data/` | [ ] |
-| 9 | GitHub sebagai pelacak progres | Commit bertahap per fitur | [ ] |
+| 8 | Tanpa database | Data lokal di `lib/data/` | [x] |
+| 9 | GitHub sebagai pelacak progres | Commit bertahap per fitur | [x] |
 
 | Bonus | Selesai |
 | :--- | :-: |
-| Dual-theme (dark dan light mode) | [ ] |
-| Adaptive dan responsive design (tablet / web) | [ ] |
+| Dual-theme (dark dan light mode) | [x] |
+| Adaptive dan responsive design (tablet / web) | [x] |
 
 ---
 
