@@ -6,6 +6,7 @@ abstract final class QuizResponsive {
   static const double tabletBreakpoint = 600;
   static const double desktopBreakpoint = 900;
   static const double maxContentWidth = 720;
+  static const double maxButtonWidth = 360;
   static const double _referenceWidth = 390;
 
   static QuizDeviceType deviceType(BuildContext context) {

@@ -18,7 +18,14 @@ final GoRouter goRouter = GoRouter(
     GoRoute(
       path: QuizlyAppRoutes.quiz,
       name: 'quiz',
-      builder: (context, state) => const QuizScreen(),
+      builder: (context, state) {
+        final args = state.extra as Map<String, dynamic>? ?? {};
+        
+        return QuizScreen(
+          nama: args['nama'] ?? 'Peserta Tanpa Nama',
+          nim: args['nim'] ?? '-',
+        );
+      },
     ),
 
     GoRoute(
