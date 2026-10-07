@@ -248,7 +248,7 @@ Proyek dikerjakan bertahap dengan satu commit untuk tiap fitur yang selesai. Riw
 - [x] Tahap 4: Navigasi dengan `go_router`
 - [x] Tahap 5: Halaman Home dan reusable widget
 - [x] Tahap 6: Halaman Quiz dan state management dengan `provider`
-- [ ] Tahap 7: Halaman Result dan Review
+- [x] Tahap 7: Halaman Result dan Review
 - [ ] Tahap 8: Responsivitas, uji rotasi layar, dan perbaikan overflow
 - [ ] Tahap 9 (bonus): Dual-theme dan adaptive layout tablet/web
 - [ ] Tahap 10: Screenshot, video presentasi, dan finalisasi README
