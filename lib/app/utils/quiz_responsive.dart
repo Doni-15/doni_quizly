@@ -16,9 +16,12 @@ abstract final class QuizResponsive {
     return QuizDeviceType.desktop;
   }
 
-  static bool isMobile(BuildContext context) => deviceType(context) == QuizDeviceType.mobile;
-  static bool isTablet(BuildContext context) => deviceType(context) == QuizDeviceType.tablet;
-  static bool isDesktop(BuildContext context) => deviceType(context) == QuizDeviceType.desktop;
+  static bool isMobile(BuildContext context) =>
+      deviceType(context) == QuizDeviceType.mobile;
+  static bool isTablet(BuildContext context) =>
+      deviceType(context) == QuizDeviceType.tablet;
+  static bool isDesktop(BuildContext context) =>
+      deviceType(context) == QuizDeviceType.desktop;
 
   static T pick<T>(
     BuildContext context, {
@@ -26,30 +29,28 @@ abstract final class QuizResponsive {
     T? tablet,
     T? desktop,
   }) {
-    return switch (deviceType(context)) { 
-      QuizDeviceType.mobile 
-        => mobile, QuizDeviceType.tablet 
-        => tablet ?? mobile, QuizDeviceType.desktop 
-        => desktop ?? tablet ?? mobile,
+    return switch (deviceType(context)) {
+      QuizDeviceType.mobile => mobile,
+      QuizDeviceType.tablet => tablet ?? mobile,
+      QuizDeviceType.desktop => desktop ?? tablet ?? mobile,
     };
   }
 
-  static double horizontalPadding(BuildContext context) => (
-    MediaQuery.sizeOf(context).width * 0.05
-  ).clamp(16.0, 48.0).toDouble();
+  static double horizontalPadding(BuildContext context) =>
+      (MediaQuery.sizeOf(context).width * 0.05).clamp(16.0, 48.0).toDouble();
 
-  static double textFactor(Size size) => (
-    size.shortestSide / _referenceWidth
-  ).clamp(0.9, 1.3).toDouble();
+  static double textFactor(Size size) =>
+      (size.shortestSide / _referenceWidth).clamp(0.9, 1.3).toDouble();
 
   static Widget appBuilder(BuildContext context, Widget? child) {
     final media = MediaQuery.of(context);
     final system = (media.textScaler.scale(14) / 14).clamp(0.9, 1.3).toDouble();
 
-    return MediaQuery( data: media.copyWith(   
-      textScaler: TextScaler.linear(system * textFactor(media.size)), 
-    ),
-    child: child ?? const SizedBox.shrink(),
+    return MediaQuery(
+      data: media.copyWith(
+        textScaler: TextScaler.linear(system * textFactor(media.size)),
+      ),
+      child: child ?? const SizedBox.shrink(),
     );
   }
 }
@@ -59,5 +60,6 @@ extension QuizSizeContext on BuildContext {
   double wp(double fraction) => screenSize.width * fraction;
   double hp(double fraction) => screenSize.height * fraction;
   double sp(double fraction) => screenSize.shortestSide * fraction;
-  bool get isLandscape => MediaQuery.orientationOf(this) == Orientation.landscape;
+  bool get isLandscape =>
+      MediaQuery.orientationOf(this) == Orientation.landscape;
 }

@@ -3,8 +3,16 @@ import 'package:flutter/material.dart';
 import 'quiz_colors.dart';
 
 abstract final class QuizColorScheme {
-  static final light = _build(QuizColors.light, QuizColors.dark, Brightness.light);
-  static final dark = _build(QuizColors.dark, QuizColors.light, Brightness.dark);
+  static final light = _build(
+    QuizColors.light,
+    QuizColors.dark,
+    Brightness.light,
+  );
+  static final dark = _build(
+    QuizColors.dark,
+    QuizColors.light,
+    Brightness.dark,
+  );
 
   static ColorScheme _build(
     QuizColors c,

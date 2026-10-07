@@ -21,46 +21,50 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final _namaC = TextEditingController();
   final _nimC = TextEditingController();
- 
+
   @override
   void dispose() {
     _namaC.dispose();
     _nimC.dispose();
     super.dispose();
   }
- 
-  bool get _isFormValid => _namaC.text.trim().isNotEmpty && _nimC.text.trim().isNotEmpty;
+
+  bool get _isFormValid =>
+      _namaC.text.trim().isNotEmpty && _nimC.text.trim().isNotEmpty;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true, 
+      extendBodyBehindAppBar: true,
       appBar: const QuizlyAppBar(showThemeToggle: true),
       body: SafeArea(
         child: QuizCenteredBody(
           child: Align(
-            alignment: const Alignment(0, -0.15), 
+            alignment: const Alignment(0, -0.15),
             child: SingleChildScrollView(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   const HomePageLogo(),
                   SizedBox(height: context.hp(0.06)),
-                  
+
                   Card(
                     margin: EdgeInsets.zero,
                     child: Padding(
-                      padding: EdgeInsets.all(context.sp(0.06).clamp(24.0, 40.0)),
+                      padding: EdgeInsets.all(
+                        context.sp(0.06).clamp(24.0, 40.0),
+                      ),
                       child: Column(
                         children: [
                           Text(
                             'Masukkan Data Diri',
-                            style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                              color: context.quizColors.textPrimary,
-                            ),
+                            style: Theme.of(context).textTheme.titleLarge
+                                ?.copyWith(
+                                  color: context.quizColors.textPrimary,
+                                ),
                           ),
                           SizedBox(height: context.hp(0.03)),
-                          
+
                           _buildNameField(),
                           SizedBox(height: context.hp(0.02)),
                           _buildNimField(),
@@ -68,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                   ),
-                  
+
                   SizedBox(height: context.hp(0.04)),
 
                   ListenableBuilder(
@@ -110,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
     quizProvider.start(nama: _namaC.text, nim: _nimC.text);
     context.go(QuizlyAppRoutes.quiz);
   }
- 
+
   Widget _buildStartButton(BuildContext context) {
     return QuizlyAppButton(
       label: 'Mulai Kuis Sekarang',
