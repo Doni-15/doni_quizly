@@ -23,16 +23,14 @@ class ResultScreen extends StatelessWidget {
         child: QuizCenteredBody(
           child: Center(
             child: SingleChildScrollView(
-              padding: EdgeInsets.symmetric(
-                vertical: context.hp(0.03),
-              ),
+              padding: EdgeInsets.symmetric(vertical: context.hp(0.03)),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   _buildScoreCard(context, quiz),
                   SizedBox(height: context.hp(0.04)),
-                  
+
                   _buildReviewButton(context),
                   const SizedBox(height: 16),
                   _buildHomeButton(context, quiz),
@@ -59,19 +57,13 @@ class ResultScreen extends StatelessWidget {
         children: [
           Container(
             width: double.infinity,
-            padding: EdgeInsets.symmetric(
-              vertical: 32 * f,
-              horizontal: 24 * f,
-            ),
+            padding: EdgeInsets.symmetric(vertical: 32 * f, horizontal: 24 * f),
 
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                colors: [
-                  gradeColor,
-                  gradeColor.withValues(alpha: 0.75), 
-                ],
+                colors: [gradeColor, gradeColor.withValues(alpha: 0.75)],
               ),
             ),
 
@@ -80,7 +72,7 @@ class ResultScreen extends StatelessWidget {
                 Text(
                   'Skor Akhir',
                   style: theme.textTheme.titleMedium?.copyWith(
-                    color: Colors.white.withValues(alpha: 0.9), 
+                    color: Colors.white.withValues(alpha: 0.9),
                   ),
                 ),
 
@@ -89,14 +81,14 @@ class ResultScreen extends StatelessWidget {
                 Text(
                   '${quiz.score}',
                   style: theme.textTheme.displayLarge?.copyWith(
-                    color: Colors.white, 
+                    color: Colors.white,
                     fontSize: 72 * f,
                     height: 1.0,
                   ),
                 ),
 
                 SizedBox(height: 16 * f),
-                
+
                 Container(
                   padding: EdgeInsets.symmetric(
                     horizontal: 16 * f,
@@ -104,19 +96,17 @@ class ResultScreen extends StatelessWidget {
                   ),
 
                   decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.25), 
+                    color: Colors.white.withValues(alpha: 0.25),
                     borderRadius: BorderRadius.circular(100),
-                    border: Border.all(color: Colors.white.withValues(alpha: 0.5)),
+                    border: Border.all(
+                      color: Colors.white.withValues(alpha: 0.5),
+                    ),
                   ),
 
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Icon(
-                        grade.icon,
-                        color: Colors.white,
-                        size: 18 * f,
-                      ),
+                      Icon(grade.icon, color: Colors.white, size: 18 * f),
 
                       SizedBox(width: 8 * f),
 
@@ -152,18 +142,14 @@ class ResultScreen extends StatelessWidget {
           Text(
             quiz.nama,
             textAlign: TextAlign.center,
-            style: theme.textTheme.titleLarge?.copyWith(
-              color: c.textPrimary,
-            ),
+            style: theme.textTheme.titleLarge?.copyWith(color: c.textPrimary),
           ),
 
           SizedBox(height: 4 * f),
 
           Text(
             'NIM ${quiz.nim}',
-            style: theme.textTheme.bodyMedium?.copyWith(
-              color: c.textSecondary,
-            ),
+            style: theme.textTheme.bodyMedium?.copyWith(color: c.textSecondary),
           ),
 
           SizedBox(height: 24 * f),
@@ -183,11 +169,7 @@ class ResultScreen extends StatelessWidget {
                 ),
               ),
 
-              Container(
-                width: 1,
-                height: 40 * f,
-                color: c.divider,
-              ),
+              Container(width: 1, height: 40 * f, color: c.divider),
 
               Expanded(
                 child: _buildStat(
@@ -219,11 +201,7 @@ class ResultScreen extends StatelessWidget {
 
     return Column(
       children: [
-        Icon(
-          icon,
-          color: iconColor,
-          size: 28 * f,
-        ),
+        Icon(icon, color: iconColor, size: 28 * f),
 
         SizedBox(height: 8 * f),
 
@@ -237,9 +215,7 @@ class ResultScreen extends StatelessWidget {
 
         Text(
           label,
-          style: theme.textTheme.bodyMedium?.copyWith(
-            color: c.textMuted,
-          ),
+          style: theme.textTheme.bodyMedium?.copyWith(color: c.textMuted),
         ),
       ],
     );
@@ -249,21 +225,19 @@ class ResultScreen extends StatelessWidget {
     return QuizlyAppButton(
       label: 'Lihat Review Jawaban',
       icon: Icons.fact_check_outlined,
-      onPressed: () => context.push(
-        QuizlyAppRoutes.review,
-      ),
+      onPressed: () => context.push(QuizlyAppRoutes.review),
     );
   }
 
   Widget _buildHomeButton(BuildContext context, QuizProvider quiz) {
     final c = context.quizColors;
-    
+
     return OutlinedButton.icon(
       onPressed: () {
-        quiz.restart(); 
+        quiz.restart();
         context.go(QuizlyAppRoutes.home);
       },
-      
+
       icon: const Icon(Icons.home_outlined),
       label: const Text('Kembali ke Beranda'),
       style: OutlinedButton.styleFrom(

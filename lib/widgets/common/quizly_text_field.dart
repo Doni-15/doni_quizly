@@ -64,9 +64,7 @@ class QuizlyTextField extends StatelessWidget {
           decoration: InputDecoration(
             labelText: label,
             hintText: hint,
-            prefixIcon: icon == null 
-              ? null 
-              : Icon(icon, size: 22 * f),
+            prefixIcon: icon == null ? null : Icon(icon, size: 22 * f),
 
             contentPadding: EdgeInsets.symmetric(
               horizontal: 16 * f,

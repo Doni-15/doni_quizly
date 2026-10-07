@@ -38,8 +38,8 @@ class QuizProvider extends ChangeNotifier {
       if (optionIds.length != question.options.length) return false;
 
       final correctCount = question.options
-        .where((option) => option.isCorrect)
-        .length;
+          .where((option) => option.isCorrect)
+          .length;
 
       if (correctCount != 1) return false;
     }

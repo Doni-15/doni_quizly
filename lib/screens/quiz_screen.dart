@@ -53,7 +53,6 @@ class QuizScreen extends StatelessWidget {
           ),
 
           SizedBox(height: context.hp(0.02)),
-
         ],
       ),
     );

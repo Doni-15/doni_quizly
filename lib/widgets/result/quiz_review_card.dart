@@ -76,14 +76,12 @@ class QuizReviewCard extends StatelessWidget {
       foreground = c.textSecondary;
       icon = Icons.remove_circle_outline;
       label = 'Tidak dijawab';
-    } 
-    else if (_isCorrect) {
+    } else if (_isCorrect) {
       background = c.successContainer;
       foreground = c.onSuccessContainer;
       icon = Icons.check_circle;
       label = 'Benar';
-    } 
-    else {
+    } else {
       background = c.errorContainer;
       foreground = c.onErrorContainer;
       icon = Icons.cancel;
@@ -110,7 +108,6 @@ class QuizReviewCard extends StatelessWidget {
     );
   }
 
-
   List<Widget> _buildOptions(ThemeData theme, QuizColors c, double f) {
     return [
       for (var i = 0; i < question.options.length; i++) ...[
@@ -132,11 +129,9 @@ class QuizReviewCard extends StatelessWidget {
     final QuizOptionState state;
     if (option.isCorrect) {
       state = QuizOptionState.correct;
-    } 
-    else if (isChosen) {
+    } else if (isChosen) {
       state = QuizOptionState.wrong;
-    } 
-    else {
+    } else {
       state = QuizOptionState.idle;
     }
 
@@ -182,8 +177,7 @@ class QuizReviewCard extends StatelessWidget {
           if (state == QuizOptionState.correct) ...[
             SizedBox(width: 8 * f),
             Icon(Icons.check_circle, size: 20 * f, color: o.border),
-          ] 
-          else if (state == QuizOptionState.wrong) ...[
+          ] else if (state == QuizOptionState.wrong) ...[
             SizedBox(width: 8 * f),
             Icon(Icons.cancel, size: 20 * f, color: o.border),
           ],
@@ -222,7 +216,6 @@ class QuizReviewCard extends StatelessWidget {
     return null;
   }
 
-
   Widget _buildExplanation(ThemeData theme, QuizColors c, double f) {
     return Container(
       padding: EdgeInsets.all(12 * f),
@@ -230,7 +223,7 @@ class QuizReviewCard extends StatelessWidget {
         color: c.surfaceRaised,
         borderRadius: BorderRadius.circular(QuizTheme.radius),
       ),
-      
+
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

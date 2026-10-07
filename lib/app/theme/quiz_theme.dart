@@ -69,7 +69,10 @@ abstract final class QuizTheme {
         floatingLabelStyle: textTheme.labelLarge?.copyWith(color: c.primary),
         errorStyle: textTheme.bodySmall?.copyWith(color: c.error),
         prefixIconColor: c.textSecondary,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 16,
+        ),
         border: inputBorder(c.border),
         enabledBorder: inputBorder(c.border),
         focusedBorder: inputBorder(c.primary, 2),
@@ -83,7 +86,10 @@ abstract final class QuizTheme {
           foregroundColor: c.onPrimary,
           disabledBackgroundColor: c.divider,
           disabledForegroundColor: c.textMuted,
-          minimumSize: const Size(kMinInteractiveDimension, kMinInteractiveDimension),
+          minimumSize: const Size(
+            kMinInteractiveDimension,
+            kMinInteractiveDimension,
+          ),
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
           textStyle: textTheme.labelLarge,
           shape: shape,
@@ -94,7 +100,10 @@ abstract final class QuizTheme {
         style: OutlinedButton.styleFrom(
           foregroundColor: c.primary,
           side: BorderSide(color: c.border, width: 1.5),
-          minimumSize: const Size(kMinInteractiveDimension, kMinInteractiveDimension),
+          minimumSize: const Size(
+            kMinInteractiveDimension,
+            kMinInteractiveDimension,
+          ),
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
           textStyle: textTheme.labelLarge,
           shape: shape,
@@ -104,7 +113,10 @@ abstract final class QuizTheme {
       textButtonTheme: TextButtonThemeData(
         style: TextButton.styleFrom(
           foregroundColor: c.primary,
-          minimumSize: const Size(kMinInteractiveDimension, kMinInteractiveDimension),
+          minimumSize: const Size(
+            kMinInteractiveDimension,
+            kMinInteractiveDimension,
+          ),
           textStyle: textTheme.labelLarge,
           shape: shape,
         ),
@@ -125,7 +137,9 @@ abstract final class QuizTheme {
         backgroundColor: c.surface,
         surfaceTintColor: Colors.transparent,
         titleTextStyle: textTheme.titleLarge,
-        contentTextStyle: textTheme.bodyMedium?.copyWith(color: c.textSecondary),
+        contentTextStyle: textTheme.bodyMedium?.copyWith(
+          color: c.textSecondary,
+        ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(radius + 8),
         ),
@@ -142,7 +156,8 @@ abstract final class QuizTheme {
       // Tombol ganti tema terang/gelap.
       switchTheme: SwitchThemeData(
         thumbColor: WidgetStateProperty.resolveWith(
-          (s) => s.contains(WidgetState.selected) ? c.onPrimary : c.textSecondary,
+          (s) =>
+              s.contains(WidgetState.selected) ? c.onPrimary : c.textSecondary,
         ),
         trackColor: WidgetStateProperty.resolveWith(
           (s) => s.contains(WidgetState.selected) ? c.primary : c.surfaceRaised,

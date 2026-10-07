@@ -22,7 +22,8 @@ class HomePageLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final c = context.quizColors;
-    final logoSize = size ?? context.sp(0.28).clamp(_minSize, _maxSize).toDouble();
+    final logoSize =
+        size ?? context.sp(0.28).clamp(_minSize, _maxSize).toDouble();
 
     final logo = Image.asset(
       assetPath,

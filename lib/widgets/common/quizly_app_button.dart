@@ -42,30 +42,30 @@ class QuizlyAppButton extends StatelessWidget {
             ),
 
             child: isLoading
-              ? SizedBox(
-                  width: 20 * f,
-                  height: 20 * f,
-                  child: const CircularProgressIndicator(strokeWidth: 2),
-                )
-              : Row(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Flexible(
-                      child: Text(
-                        label,
-                        textAlign: TextAlign.center,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
+                ? SizedBox(
+                    width: 20 * f,
+                    height: 20 * f,
+                    child: const CircularProgressIndicator(strokeWidth: 2),
+                  )
+                : Row(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Flexible(
+                        child: Text(
+                          label,
+                          textAlign: TextAlign.center,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
                       ),
-                    ),
-                    
-                    if (icon != null) ...[
-                      SizedBox(width: 8 * f),
-                      Icon(icon, size: 20 * f),
+
+                      if (icon != null) ...[
+                        SizedBox(width: 8 * f),
+                        Icon(icon, size: 20 * f),
+                      ],
                     ],
-                  ],
-                ),
+                  ),
           ),
         ),
       ),

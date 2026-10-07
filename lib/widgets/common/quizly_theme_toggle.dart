@@ -2,18 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:quizly/app/theme/quiz_theme_controller.dart';
 
 class QuizlyThemeToggle extends StatelessWidget {
-  const QuizlyThemeToggle({
-    super.key, 
-    required this.controller
-  });
+  const QuizlyThemeToggle({super.key, required this.controller});
 
   final QuizThemeController controller;
 
   static final _thumbIcon = WidgetStateProperty.resolveWith<Icon?>(
     (states) => Icon(
       states.contains(WidgetState.selected)
-        ? Icons.dark_mode
-        : Icons.light_mode,
+          ? Icons.dark_mode
+          : Icons.light_mode,
     ),
   );
 

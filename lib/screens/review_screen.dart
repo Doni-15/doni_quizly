@@ -20,8 +20,9 @@ class ReviewScreen extends StatelessWidget {
           child: ListView.separated(
             padding: EdgeInsets.symmetric(vertical: context.hp(0.02)),
             itemCount: reviews.length,
-            separatorBuilder: (context, index) => SizedBox(height: context.hp(0.02)),
-            
+            separatorBuilder: (context, index) =>
+                SizedBox(height: context.hp(0.02)),
+
             itemBuilder: (context, index) => QuizReviewCard(
               number: index + 1,
               question: reviews[index].question,

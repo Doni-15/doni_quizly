@@ -1,30 +1,71 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:quizly/app/quizly_app.dart';
-
+import 'package:quizly/app/theme/quiz_theme.dart';
+import 'package:quizly/screens/home_screen.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const QuizlyApp());
+  Widget createTestWidget() {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: QuizTheme.light,
+      home: const HomeScreen(),
+    );
+  }
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  group('HomeScreen', () {
+    testWidgets('menampilkan form data diri', (tester) async {
+      await tester.pumpWidget(createTestWidget());
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+      expect(find.text('Masukkan Data Diri'), findsOneWidget);
+      expect(find.text('Nama Lengkap'), findsOneWidget);
+      expect(find.text('NIM'), findsOneWidget);
+      expect(find.text('Mulai Kuis Sekarang'), findsOneWidget);
+    });
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    testWidgets('tombol mulai kuis disabled ketika form kosong', (
+      tester,
+    ) async {
+      await tester.pumpWidget(createTestWidget());
+
+      final button = tester.widget<FilledButton>(find.byType(FilledButton));
+
+      expect(button.onPressed, isNull);
+    });
+
+    testWidgets('tombol mulai kuis enabled setelah nama dan NIM diisi', (
+      tester,
+    ) async {
+      await tester.pumpWidget(createTestWidget());
+
+      final fields = find.byType(TextFormField);
+
+      expect(fields, findsNWidgets(2));
+
+      await tester.enterText(fields.at(0), 'Doni');
+      await tester.enterText(fields.at(1), '241401123');
+      await tester.pump();
+
+      final button = tester.widget<FilledButton>(find.byType(FilledButton));
+
+      expect(button.onPressed, isNotNull);
+    });
+
+    testWidgets('NIM hanya menerima angka', (tester) async {
+      await tester.pumpWidget(createTestWidget());
+
+      final fields = find.byType(TextFormField);
+
+      expect(fields, findsNWidgets(2));
+
+      final nimField = fields.at(1);
+
+      await tester.enterText(nimField, '24140abc1123');
+      await tester.pump();
+
+      expect(
+        tester.widget<TextFormField>(nimField).controller?.text,
+        '241401123',
+      );
+    });
   });
 }
