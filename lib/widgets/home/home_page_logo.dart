@@ -3,8 +3,8 @@ import 'package:quizly/app/theme/quiz_colors.dart';
 import 'package:quizly/app/theme/quiz_gradients.dart';
 import 'package:quizly/app/utils/quiz_responsive.dart';
 
-class QuizlyLogo extends StatelessWidget {
-  const QuizlyLogo({
+class HomePageLogo extends StatelessWidget {
+  const HomePageLogo({
     super.key,
     this.assetPath = defaultAssetPath,
     this.size,

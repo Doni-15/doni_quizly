@@ -9,7 +9,7 @@ class QuizOption {
   const QuizOption({
     required this.id,
     required this.text,
-    required this.isCorrect
+    required this.isCorrect,
   });
 }
 
@@ -24,10 +24,10 @@ class QuizQuestion {
     required this.id,
     required this.questionText,
     required this.options,
-    required this.explanation
+    required this.explanation,
   });
 
-  QuizOption get correctOption{
-    return options.firstWhere((options) => options.isCorrect);
+  QuizOption get correctOption {
+    return options.firstWhere((option) => option.isCorrect);
   }
 }
