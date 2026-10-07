@@ -5,9 +5,9 @@ import 'package:quizly/providers/quiz_provider.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => QuizProvider(),
-      child: const QuizlyApp(),
-    )
+    ChangeNotifierProvider.value(
+      value: quizProvider, 
+      child: const QuizlyApp()
+    ),
   );
 }

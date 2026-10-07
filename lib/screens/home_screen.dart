@@ -3,10 +3,11 @@ import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:quizly/app/routes/quizly_app_routes.dart';
 import 'package:quizly/app/utils/quiz_responsive.dart';
+import 'package:quizly/providers/quiz_provider.dart';
 import 'package:quizly/widgets/common/quizly_app_bar.dart';
 import 'package:quizly/widgets/common/quizly_app_button.dart';
 import 'package:quizly/widgets/common/quizly_text_field.dart';
-import 'package:quizly/widgets/home/quizly_logo.dart';
+import 'package:quizly/widgets/home/home_page_logo.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -18,14 +19,14 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final _namaC = TextEditingController();
   final _nimC = TextEditingController();
-
+ 
   @override
   void dispose() {
     _namaC.dispose();
     _nimC.dispose();
     super.dispose();
   }
-
+ 
   bool get _isFormValid => _namaC.text.trim().isNotEmpty && _nimC.text.trim().isNotEmpty;
 
   @override
@@ -47,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const QuizlyLogo(),
+                  const HomePageLogo(),
                   SizedBox(height: context.hp(0.1)),
 
                   _buildNameField(),
@@ -93,19 +94,16 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
+  void _startQuiz(BuildContext context) {
+    quizProvider.start(nama: _namaC.text, nim: _nimC.text);
+    context.go(QuizlyAppRoutes.quiz);
+  }
+ 
   Widget _buildStartButton(BuildContext context) {
     return QuizlyAppButton(
       label: 'Mulai Kuis',
       icon: Icons.play_arrow,
-      onPressed: _isFormValid
-        ? () => context.go(
-            QuizlyAppRoutes.quiz,
-            extra: {
-              'nama': _namaC.text.trim(),
-              'nim': _nimC.text.trim(),
-            },
-          )
-        : null,
+      onPressed: _isFormValid ? () => _startQuiz(context) : null,
     );
   }
 }

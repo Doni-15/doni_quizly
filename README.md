@@ -62,20 +62,20 @@ Kuis terdiri dari 10 pertanyaan seputar dasar-dasar kriptografi, seperti cipher 
 
 | No | Kriteria wajib | Implementasi | Selesai |
 | :-: | :--- | :--- | :-: |
-| 1 | `StatelessWidget` dan `StatefulWidget` | `StatefulWidget` dipakai pada form input nama untuk mengelola `TextEditingController`, `StatelessWidget` untuk komponen UI statis seperti tombol dan kartu. | [ ] |
+| 1 | `StatelessWidget` dan `StatefulWidget` | `StatefulWidget` dipakai pada form input nama untuk mengelola `TextEditingController`, `StatelessWidget` untuk komponen UI statis seperti tombol dan kartu. | [x] |
 | 2 | Minimal 2 halaman dan navigasi | 4 halaman (Home, Quiz, Result, Review) dengan `go_router` | [x] |
 | 3 | Reusable widget di file terpisah | `lib/widgets/` | [x] |
 | 4 | Aset gambar atau ikon | `assets/images/` | [x] |
 | 5 | Font kustom | Plus Jakarta Sans, diatur terpusat lewat `ThemeData`. | [x] |
 | 6 | Ukuran UI dinamis | `QuizResponsive.appBuilder` dan `MediaQuery.sizeOf(context)` untuk menghitung padding dan skala teks (`TextScaler`). | [x] |
-| 7 | State management (progres aman saat rotasi dan pindah halaman) | `provider` (`ChangeNotifier`) | [ ] |
+| 7 | State management (progres aman saat rotasi dan pindah halaman) | `provider` (`ChangeNotifier`) | [x] |
 | 8 | Tanpa database | Data lokal di `lib/data/` | [x] |
 | 9 | GitHub sebagai pelacak progres | Commit bertahap per fitur | [x] |
 
 | Bonus | Selesai |
 | :--- | :-: |
 | Dual-theme (dark dan light mode) | [x] |
-| Adaptive dan responsive design (tablet / web) | [x] |
+| Adaptive dan responsive design (tablet / web) | [ ] |
 
 ---
 
@@ -247,7 +247,7 @@ Proyek dikerjakan bertahap dengan satu commit untuk tiap fitur yang selesai. Riw
 - [x] Tahap 3: Model dan data pertanyaan lokal
 - [x] Tahap 4: Navigasi dengan `go_router`
 - [x] Tahap 5: Halaman Home dan reusable widget
-- [ ] Tahap 6: Halaman Quiz dan state management dengan `provider`
+- [x] Tahap 6: Halaman Quiz dan state management dengan `provider`
 - [ ] Tahap 7: Halaman Result dan Review
 - [ ] Tahap 8: Responsivitas, uji rotasi layar, dan perbaikan overflow
 - [ ] Tahap 9 (bonus): Dual-theme dan adaptive layout tablet/web
