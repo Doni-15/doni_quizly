@@ -27,9 +27,7 @@ void main() {
     ) async {
       await tester.pumpWidget(createTestWidget());
 
-      final button = tester.widget<FilledButton>(
-        find.byType(FilledButton),
-      );
+      final button = tester.widget<FilledButton>(find.byType(FilledButton));
 
       expect(button.onPressed, isNull);
     });
@@ -47,9 +45,7 @@ void main() {
       await tester.enterText(fields.at(1), '241401123');
       await tester.pump();
 
-      final button = tester.widget<FilledButton>(
-        find.byType(FilledButton),
-      );
+      final button = tester.widget<FilledButton>(find.byType(FilledButton));
 
       expect(button.onPressed, isNotNull);
     });
