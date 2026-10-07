@@ -16,3 +16,5 @@ class QuizThemeController extends ChangeNotifier {
     setMode(isDark ? ThemeMode.light : ThemeMode.dark);
   }
 }
+
+final themeController = QuizThemeController();

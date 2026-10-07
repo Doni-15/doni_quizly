@@ -52,9 +52,9 @@ Kuis terdiri dari 10 pertanyaan seputar dasar-dasar kriptografi, seperti cipher 
 
 ### Fitur tambahan dan bonus
 
-- [ ] Dual-theme (dark dan light mode)
+- [x] Dual-theme (dark dan light mode)
 - [ ] Adaptive dan responsive layout untuk tablet dan web
-- [ ] Native splash screen kustom yang menyesuaikan tema terang/gelap (menghindari blank screen di awal)
+- [x] Native splash screen kustom yang menyesuaikan tema terang/gelap (menghindari blank screen di awal)
 
 ---
 
@@ -64,7 +64,7 @@ Kuis terdiri dari 10 pertanyaan seputar dasar-dasar kriptografi, seperti cipher 
 | :-: | :--- | :--- | :-: |
 | 1 | `StatelessWidget` dan `StatefulWidget` | `StatefulWidget` dipakai pada form input nama untuk mengelola `TextEditingController`, `StatelessWidget` untuk komponen UI statis seperti tombol dan kartu. | [ ] |
 | 2 | Minimal 2 halaman dan navigasi | 4 halaman (Home, Quiz, Result, Review) dengan `go_router` | [x] |
-| 3 | Reusable widget di file terpisah | `lib/widgets/` | [ ] |
+| 3 | Reusable widget di file terpisah | `lib/widgets/` | [x] |
 | 4 | Aset gambar atau ikon | `assets/images/` | [x] |
 | 5 | Font kustom | Plus Jakarta Sans, diatur terpusat lewat `ThemeData`. | [x] |
 | 6 | Ukuran UI dinamis | `QuizResponsive.appBuilder` dan `MediaQuery.sizeOf(context)` untuk menghitung padding dan skala teks (`TextScaler`). | [x] |
@@ -245,8 +245,8 @@ Proyek dikerjakan bertahap dengan satu commit untuk tiap fitur yang selesai. Riw
 - [x] Tahap 1: Inisialisasi proyek dan konfigurasi dependencies dan aset
 - [x] Tahap 2: Struktur folder, tema, dan font kustom
 - [x] Tahap 3: Model dan data pertanyaan lokal
-- [ ] Tahap 4: Navigasi dengan `go_router`
-- [ ] Tahap 5: Halaman Home dan reusable widget
+- [x] Tahap 4: Navigasi dengan `go_router`
+- [x] Tahap 5: Halaman Home dan reusable widget
 - [ ] Tahap 6: Halaman Quiz dan state management dengan `provider`
 - [ ] Tahap 7: Halaman Result dan Review
 - [ ] Tahap 8: Responsivitas, uji rotasi layar, dan perbaikan overflow
