@@ -202,12 +202,27 @@ Jika setelah langkah di atas aplikasi masih tidak bisa berjalan, mohon lihat vid
 
 ### Screenshot
 
+#### Devices HP ####
 | Halaman | Tampilan |
 | :--- | :---: |
 | Home | ![Home](screenshots/home.png) |
 | Quiz | ![Quiz](screenshots/quiz.png) |
 | Result | ![Result](screenshots/result.png) |
 | Review | ![Review](screenshots/review.png) |
+
+#### Devices Laptop ####
+| Halaman | Tampilan |
+| :--- | :---: |
+| Home | ![Home](screenshots/home_laptop.png) |
+| Quiz | ![Quiz](screenshots/quiz_laptop.png) |
+| Result | ![Result](screenshots/result_laptop.png) |
+| Review | ![Review](screenshots/review_laptop.png) |
+
+#### Light Mode ####
+| Halaman | Tampilan |
+| :--- | :---: |
+| HP | ![HP](screenshots/home_light_mode.png) |
+| Laptop | ![Laptop](screenshots/home_laptop_light_mode.png) |
 
 ### Video Presentasi
 
@@ -249,8 +264,8 @@ Proyek dikerjakan bertahap dengan satu commit untuk tiap fitur yang selesai. Riw
 - [x] Tahap 5: Halaman Home dan reusable widget
 - [x] Tahap 6: Halaman Quiz dan state management dengan `provider`
 - [x] Tahap 7: Halaman Result dan Review
-- [ ] Tahap 8: Responsivitas, uji rotasi layar, dan perbaikan overflow
-- [ ] Tahap 9 (bonus): Dual-theme dan adaptive layout tablet/web
+- [x] Tahap 8: Responsivitas, uji rotasi layar, dan perbaikan overflow
+- [x] Tahap 9 (bonus): Dual-theme dan adaptive layout tablet/web
 - [ ] Tahap 10: Screenshot, video presentasi, dan finalisasi README
 
 ---
