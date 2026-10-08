@@ -224,6 +224,10 @@ Jika setelah langkah di atas aplikasi masih tidak bisa berjalan, mohon lihat vid
 | HP | ![HP](screenshots/home_light_mode.png) |
 | Laptop | ![Laptop](screenshots/home_laptop_light_mode.png) |
 
+### Mockup Aplikasi
+
+🎥 **[Lihat Mockup Aplikasi Quizly]([https://drive.google.com/file/d/1B8JNyJqkvBCBE4aEUv7K7yWtqhZZ39aC/view?usp=sharing](https://www.figma.com/design/dwL4ZLGdy94Q4Tlbt4s7rp/Pemrograman-Mobile-Lab-1?node-id=0-1&t=NYiiImPytG1VtySD-1))**
+
 ### Video Presentasi
 
 🎥 **[Tonton Video Presentasi Quizly](https://drive.google.com/file/d/1B8JNyJqkvBCBE4aEUv7K7yWtqhZZ39aC/view?usp=sharing)**
