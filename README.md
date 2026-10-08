@@ -53,7 +53,7 @@ Kuis terdiri dari 10 pertanyaan seputar dasar-dasar kriptografi, seperti cipher 
 ### Fitur tambahan dan bonus
 
 - [x] Dual-theme (dark dan light mode)
-- [ ] Adaptive dan responsive layout untuk tablet dan web
+- [x] Adaptive dan responsive layout untuk tablet dan web
 - [x] Native splash screen kustom yang menyesuaikan tema terang/gelap (menghindari blank screen di awal)
 
 ---
@@ -75,7 +75,7 @@ Kuis terdiri dari 10 pertanyaan seputar dasar-dasar kriptografi, seperti cipher 
 | Bonus | Selesai |
 | :--- | :-: |
 | Dual-theme (dark dan light mode) | [x] |
-| Adaptive dan responsive design (tablet / web) | [ ] |
+| Adaptive dan responsive design (tablet / web) | [x] |
 
 ---
 
@@ -226,7 +226,7 @@ Jika setelah langkah di atas aplikasi masih tidak bisa berjalan, mohon lihat vid
 
 ### Video Presentasi
 
-TODO: tempel link Google Drive (durasi maksimal 10 menit).
+[VIDEO PENJELASAN](https://drive.google.com/file/d/1B8JNyJqkvBCBE4aEUv7K7yWtqhZZ39aC/view?usp=sharing)
 
 ---
 
@@ -266,7 +266,7 @@ Proyek dikerjakan bertahap dengan satu commit untuk tiap fitur yang selesai. Riw
 - [x] Tahap 7: Halaman Result dan Review
 - [x] Tahap 8: Responsivitas, uji rotasi layar, dan perbaikan overflow
 - [x] Tahap 9 (bonus): Dual-theme dan adaptive layout tablet/web
-- [ ] Tahap 10: Screenshot, video presentasi, dan finalisasi README
+- [x] Tahap 10: Screenshot, video presentasi, dan finalisasi README
 
 ---
 
