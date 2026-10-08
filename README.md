@@ -226,9 +226,9 @@ Jika setelah langkah di atas aplikasi masih tidak bisa berjalan, mohon lihat vid
 
 ### Video Presentasi
 
-[VIDEO PENJELASAN](https://drive.google.com/file/d/1B8JNyJqkvBCBE4aEUv7K7yWtqhZZ39aC/view?usp=sharing)
+🎥 **[Tonton Video Presentasi Quizly](https://drive.google.com/file/d/1B8JNyJqkvBCBE4aEUv7K7yWtqhZZ39aC/view?usp=sharing)**
 
----
+Video mencakup demonstrasi fungsionalitas aplikasi, responsivitas pada berbagai ukuran layar, alur kerja aplikasi, serta penjelasan implementasi dan fitur tambahan.
 
 ## Credit Aset
 
